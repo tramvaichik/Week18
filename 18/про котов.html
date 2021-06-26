@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для котиков</title>
+    <link rel="shortcut icon"
+        href="https://www.flaticon.com/svg/vstatic/svg/616/616430.svg?token=exp=1611653576~hmac=1aabbabd3bc8928fe388dc539668ec55">
+
+</head>
+<style>
+    .body {
+        display: flex;
+        justify-content: center;
+        background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612764395_107-p-fon-goluboi-gradient-nezhnii-118.jpg);
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .main {
+        display: grid;
+        justify-content: center;
+        width: 30%;
+        letter-spacing: 0.2em;
+        border: 3px solid;
+        border-image: linear-gradient(20deg, #ffa600 43%, #ea00ff 65%);
+        border-image-slice: 1;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Gill Sans',
+            'Gill Sans MT',
+            Calibri,
+            'Trebuchet MS',
+            sans-serif;
+        font-weight: 650;
+        background: linear-gradient(rgb(200, 255, 0), yellow, green, #ea00ff);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .label {
+        color: #fbff00;
+        font-size: 20px;
+    }
+
+    .incline {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        color: rgb(113, 34, 165);
+    }
+
+    p,
+    .sex {
+        font-family: Verdana,
+            Geneva,
+            Tahoma,
+            sans-serif;
+        color: rgb(12, 90, 16);
+        font-weight: bolder;
+    }
+
+    .feed,
+    .sex_cat {
+        font-family: Verdana,
+            Geneva,
+            Tahoma,
+            sans-serif;
+        color: rgb(42, 27, 95);
+        font-weight: bolder;
+    }
+
+    .button {
+        display: grid;
+        justify-content: center;
+
+    }
+
+    .btn {
+        border-radius: 55px;
+        background: linear-gradient(to bottom right, rgb(128, 0, 0), rgb(230, 255, 1), rgb(0, 162, 255), rgb(0, 255, 13));
+        color: rgb(15, 2, 49);
+        font-weight: bolder;
+        width: 89px;
+        height: 45px;
+        margin: 10%;
+    }
+
+    input:required:valid {
+        border-color: rgb(251, 255, 0);
+    }
+</style>
+
+
+
+<body class="body">
+    <div class="main">
+        <form class="form">
+            <h1>Опрос</h1>
+            <div class="name">
+                <div>
+                    <label for="name" class="label"> * </label>
+                    <input type="text" id="name" placeholder="Кличка кота" required>
+                </div>
+                <div>
+                    <br> <label for="humanName" class="label"> * </label>
+                    <input type="text" id="humanName" placeholder="Имя владельца" required>
+                </div>
+                <div>
+                    <br> <label for="humanPhone" class="label"> *</label>
+                    <input type="tel" name="humanPhone" placeholder="Телефон владельца" required>
+                </div>
+                <div>
+                    <br> <label for="humanMail" class="label"> * </label>
+                    <input type="email" name="email" placeholder="E-Mail владельца" required>
+                </div>
+                <div>
+                    <p class="incline"> Поля отмеченые * обязательны <br> к заполнению </p>
+                </div>
+            </div>
+            <div>
+                <p>Порода кота</p>
+                <select>
+                    <option value=".">---</option>
+                    <option value="Мейн Кун">Мейн Кун</option>
+                    <option value="манчкин">Манчкин</option>
+                    <option value="абиссинская">Абиссинская</option>
+                    <option value="метис">Метис</option>
+                    <option value="невская маскарадная">Невская маскарадная</option>
+                    <option value="сфинкс">Сфинкс</option>
+                    <option value="шотландская вислоухая">Шотландская вислоухая</option>
+                </select>
+            </div>
+            <div class="feed">
+                <p>Чем питается:</p>
+                <label for="dry"> Сухой корм </label>
+                <input type="checkbox" id="dry">
+                <br> <label for="wet"> Влажный корм </label>
+                <input type="checkbox" id="wet">
+                <br> <label for="natural">Натуральный корм </label>
+                <input type="checkbox" id="natural">
+            </div>
+            <div class="sex_cat">
+                <br>
+                <label for="sex2" class="sex"> Пол кота </label><br>
+                <br> <input type="radio" name="sex2" id="sex2" /> Самка <br>
+                <input type="radio" name="sex2" /> Самец
+            </div>
+
+            <div>
+                <p>Коментарий владельца</p>
+                <textarea rows="15"></textarea>
+                <br>
+                <input type="file"><br>
+            </div>
+            <div class="button">
+                <button class="btn">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

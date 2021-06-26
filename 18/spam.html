@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        display: grid;
+        border: rgb(255, 0, 128) 2px dashed;
+    }
+
+    .avatar {
+        padding: 1%;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        padding: 1%;
+    }
+
+    .comment {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        padding: 1%;
+    }
+
+    .message,
+    .btn {
+        display: flex;
+        padding: 1%;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="avatar">
+            <input id="file" type="file" name="file" multiple>
+        </div>
+        <div class="name">
+            <label for="name" class="label"> *Nick </label>
+            <input type="text" id="one" placeholder required>
+            <button onclick="saveNick()"> Save </button><br>
+        </div>
+        <div>
+            <div class="comment">
+                <span> *Comment: </span>
+                <textarea class="two" rows="5" id="two"></textarea>
+            </div>
+            <div class="message">
+                <textarea class="three" rows="7" cols="85" id="three"></textarea>
+            </div>
+            <div class="btn">
+                <button class="butt" onclick="Cmt()"> Send message </button>
+            </div>
+        </div>
+
+        <script>
+            function Cmt() {
+                let nick = document.getElementById("one").value;
+                let comment = document.getElementById("two").value;
+                let files = document.getElementById("file").value;
+                comment = checkSpam(comment);
+                document.getElementById("three").value += nick + ": " + comment + ". ";
+
+            }
+
+            function saveNick() {
+                let nick = document.getElementById("one").value;
+                let files = document.getElementById("file").files;
+
+
+
+                if (localStorage.setItem(nick, file)) {
+                    localStorage.getItem(nick);
+                }
+                alert("Saved");
+            }
+
+            function checkSpam(str) {
+                str = str.replace(/viagra/ig, "***");
+                str = str.replace(/xxx/ig, "***");
+
+                return str;
+            }
+
+
+        </script>
+
+</body>
+
+</html>

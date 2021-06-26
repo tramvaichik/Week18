@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/check_in.css">
+    <title> Кошачий форум </title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url(https://csgodb.ru/img.php?id=108959);
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 750;
+        background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: rainbow 10s ease infinite;
+        animation: rainbow 20s ease infinite;
+        font-size: 25px;
+        line-height: 25px;
+
+    }
+
+    @-webkit-keyframes rainbow {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes rainbow {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    .subtitle {
+        display: flex;
+        justify-content: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: large;
+        font-style: oblique;
+        font-weight: 600;
+        color: rgb(26, 212, 181);
+    }
+
+    .forma {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .form {
+        display: grid;
+        justify-content: center;
+        width: 30%;
+        border: 2px solid rgb(0, 0, 0);
+        background-color: rgba(143, 194, 194, 0.582);
+    }
+
+    .desc {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 36px;
+        font-style: oblique;
+        font-weight: 600;
+        color: rgb(67, 43, 133);
+
+    }
+
+    #nickname,
+    #breed,
+    #catMail,
+    #humanName,
+    #humanPhone,
+    #homeAddress {
+        margin-top: 3%;
+        margin-bottom: 6%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 16px;
+        font-style: oblique;
+        font-weight: 200;
+    }
+
+    .nickname,
+    .breed,
+    .catMail,
+    .humanName,
+    .humanPhone,
+    .homeAddress {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 19px;
+        font-weight: bolder;
+        color: rgb(6, 65, 47);
+    }
+
+    .btn {
+        padding-top: 3%;
+        margin-bottom: 10%;
+    }
+
+    .button {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background: linear-gradient(to right, rgb(11, 216, 216), rgb(75, 96, 214), rgb(80, 62, 179));
+        color: rgb(255, 255, 255);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 19px;
+        font-weight: bolder;
+    }
+</style>
+
+
+<body>
+    <h1 class="title"> Помощь котам в понимании своего человека </h1>
+    <h2 class="subtitle"> Зарегистрируйся, что бы задавать вопросы или читать ответы на частые вопросы. И просто
+        общаться с
+        другими котиками &#128570; </h2>
+    <div class="forma">
+        <div class="form">
+            <p class="desc"> Регистрация </p>
+            <div>
+                <label for="nickname" class="nickname"> Твоя кличка </label>
+                <br>
+                <input type="text" id="nickname">
+
+            </div>
+            <div class="breed"> Твоя порода
+                <br>
+                <select>
+                    <option value="Мейн Кун">Мейн Кун</option>
+                    <option value="манчкин">Манчкин</option>
+                    <option value="абиссинская">Абиссинская</option>
+                    <option value="метис">Метис</option>
+                    <option value="невская маскарадная">Невская маскарадная</option>
+                    <option value="сфинкс">Сфинкс</option>
+                    <option value="шотландская вислоухая">Шотландская вислоухая</option>
+                </select>
+                <div>
+                    <label for="catMail" class="catMail"> Твоя почта</label>
+                    <br>
+                    <input type="text" id="catMail">
+                </div>
+                <div>
+                    <label for="humanName" class="humanName"> Имя твоего человека</label>
+                    <br>
+                    <input type="text" id="humanName">
+                </div>
+                <div>
+                    <label for="humanPhone" class="humanPhone"> Телефон твоего человека </label>
+                    <br>
+                    <input type="text" id="humanPhone">
+                </div>
+                <div>
+                    <label for="homeAddress" class="homeAddress"> Ваш домашний адрес </label>
+                    <br>
+                    <input type="text" id="homeAddress">
+                </div>
+                <div class="btn"> <br>
+                    <button class="button" onclick="register()">Зарегистрироваться</button>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            function register() {
+                let nickname, catMail, humanName, humanPhone, homeAddress;
+
+                nickname = document.getElementById('nickname').value;
+                catMail = document.getElementById('catMail').value;
+                humanName = document.getElementById('humanName').value;
+                humanPhone = document.getElementById('humanPhone').value;
+                homeAddress = document.getElementById('homeAddress').value;
+
+                const regexForNick = /^[А-Яа-яa-z0-9_-]{1,16}$/;
+                const regexForMail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+                const regexForName = /^([a-zа-яё]+[\s]{0,1}[a-zа-яё]+[\s]{0,1}[a-zа-яё]+)$/ig;
+                const regexForPhone = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+                const regexForAddress = /^[А-Яа-яaa-zA-Z]([А-Яа-яaa-zA-Z-]+\s)+\d{1,4}$/;
+
+                if (nickname == '' || !regexForNick.test(nickname)) {
+                    alert("Вы не написали свою кличку");
+                } else if (catMail == '' || !regexForMail.test(catMail)) {
+                    alert("Не корректный адрес почты");
+                } else if (humanName == '' || !regexForName.test(humanName)) {
+                    alert("Будь внимательнее, нет имени человека!");
+                } else if (humanPhone == '' || !regexForPhone.test(humanPhone)) {
+                    alert('A телефон?');
+                } else if (homeAddress == '' || !regexForAddress.test(homeAddress)) {
+                    alert('Соберись! Ты пропустил домашний адрес!');
+                } else {
+                    alert(`Привет, ${nickname}!`);
+                }
+            }
+        </script>
+</body>
+
+</html>
