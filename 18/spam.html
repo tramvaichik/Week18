@@ -90,6 +90,10 @@
                 return str;
             }
 
+            document.addEventListener("DOMContentLoaded", function () {
+                console.log("log " + localStorage.getItem(document.getElementById("one").value));
+            });
+
 
         </script>
 
